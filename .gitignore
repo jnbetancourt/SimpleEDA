@@ -5,7 +5,7 @@
 
 .DS_Store
 
-.pdf
-.tex
-.synctex.gz
-.log
+*.pdf
+*.tex
+*.synctex.gz
+*.log
