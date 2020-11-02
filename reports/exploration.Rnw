@@ -24,7 +24,32 @@
 
 \begin{document} 
 \maketitle
-\section{Outline}
-The assignment is: After your group has had a chance to explore several R packages and tutorials, discuss some possibilities for your own package. Write a short (~1 page) document that outlines what you think you would like your package to do. It is fine to create a package for which established alternatives already exist, but it should not be an exact copy of an existing package. It is also fine for functions in your package to rely on other R packages, but your package should be more than a simple “wrapper” for another R package(s). Explain how you envision someone using your software.
+\section*{Assignment - This section will be removed}
+The Assignment Is: After your group has had a chance to explore several R packages 
+and tutorials, discuss some possibilities for your own package. Write a short 
+(~1 page) document that outlines what you think you would like your package to do. 
+It is fine to create a package for which established alternatives already exist, 
+but it should not be an exact copy of an existing package. It is also fine for 
+functions in your package to rely on other R packages, but your package should be 
+more than a simple “wrapper” for another R package(s). Explain how you envision 
+someone using your software.
+
+\section*{High Level Concept of R Package}
+TODO: Something about how we would like to create an R package that takes a data 
+frame, and tell it what the predictor and response variables are, and then it will 
+produce all the standard EDA tests and plots in one go. It would do histograms of 
+variables, correlations of predictors and response variables, and consider standard 
+variable transformations. blah blah blah, expand on this...
+
+\section*{Additional R Packages}
+TODO: In this section we can discuss the high level R packages that we'll most likely 
+use, like tidyverse. We can write this in some sort of coherent paragraph.
+
+\section*{Potential Usage}
+TODO: Write something about how we envision someone using this for like the Data 
+Analysis Exam, or first pass at an EDA. Basically we envision someone using this 
+tool to perform a quick EDA dump just to get a little bit of everything for a simple 
+regression analysis. We can write this in some sort of complete coherent way.
+
 
 \end{document}
