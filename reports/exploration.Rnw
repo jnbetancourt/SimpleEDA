@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+\usepackage{rotating}
+\usepackage{graphics}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{listings} % allows for importing code scripts into the tex file
+\usepackage[margin=1in, left=1.25in]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\title{Stat 580: Group 5 - Exploration} 
+\author{Jennifer Betancourt, Michael Herrington, Justin Kinoshita, Robyn Saiki}
+\date{\today}
+
+\begin{document} 
+\maketitle
+\section{Outline}
+The assignment is: After your group has had a chance to explore several R packages and tutorials, discuss some possibilities for your own package. Write a short (~1 page) document that outlines what you think you would like your package to do. It is fine to create a package for which established alternatives already exist, but it should not be an exact copy of an existing package. It is also fine for functions in your package to rely on other R packages, but your package should be more than a simple “wrapper” for another R package(s). Explain how you envision someone using your software.
+
+\end{document}
