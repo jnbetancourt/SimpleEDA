@@ -6,10 +6,11 @@
 3) Follow the instructions at https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address to set up your email address
 4) Open the Terminal app on Mac or the Command Line app on Windows and type:
 `git config --global user.name "<YOUR NAME>"` where `<YOUR NAME>` is replaced by
-your name.
+your name. This will be the name that gets attached to any commits that you write, 
+and can either be your name or GitHub user name, based on your preference. 
 
 
-## Importing Project into RStudio
+## Importing the Project into RStudio
 1) Click File -> New Project
 2) Select “Version Control”
 3) Select “Git”
@@ -19,7 +20,7 @@ the project files
 5) There will be a prompt to enter your GitHub password
 6) This should create a directory called `SimpleEDA` on your computer with the project files.
 
-## Instructions to push changes to git
+## Instructions to Push Changes to Git
 1) Make changes to files in the SimpleEDA folder
 2) In RStudio select Tools->Version Control->Commit
 3) This will open a dialog box that lists all the files that you have made changes
