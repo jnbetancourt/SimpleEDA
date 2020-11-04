@@ -38,7 +38,4 @@ box.
 6) If someone else has made changes to the same files as you, there will be a message saying
 that there is a conflict. You can use that dialog to open a merge tool that allows you to
 merge your changes with the ones on GitHub.
-7) Click the button that says "Push"
-
-
-Testing....
+7) Click the button that says "Push".
