@@ -26,7 +26,7 @@ the project files
 Note: If there are conflicts it will open a merge dialog where you can resolve them
 
 ## Instructions to Push Changes to Git
-1) Make changes to files in the SimpleEDA folder asdf
+1) Make changes to files in the SimpleEDA folder
 2) In RStudio select Tools->Version Control->Commit
 3) This will open a dialog box that lists all the files that you have made changes
 to. Click the checkbox next to all of the files that you want to push changes for,
