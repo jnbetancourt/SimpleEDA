@@ -20,6 +20,11 @@ the project files
 5) There will be a prompt to enter your GitHub password
 6) This should create a directory called `SimpleEDA` on your computer with the project files.
 
+## Instructions to Get new Changes to Local RStudio
+1) Open Project
+2) Go to Tools -> Version Control -> Pull Branches
+Note: If there are conflicts it will open a merge dialog where you can resolve them
+
 ## Instructions to Push Changes to Git
 1) Make changes to files in the SimpleEDA folder
 2) In RStudio select Tools->Version Control->Commit
