@@ -40,3 +40,5 @@ that there is a conflict. You can use that dialog to open a merge tool that allo
 merge your changes with the ones on GitHub.
 7) Click the button that says "Push"
 
+
+Testing...
