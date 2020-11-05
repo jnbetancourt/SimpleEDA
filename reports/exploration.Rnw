@@ -18,38 +18,49 @@
 \usepackage{graphicx}
 \usepackage{enumitem}
 
-\title{Stat 580: Group 5 - Exploration} 
-\author{Jennifer Betancourt, Michael Herrington, Justin Kinoshita, Robyn Saiki}
+\title{Stat 580: Exploration} 
+\author{Group 5}
 \date{\today}
 
 \begin{document} 
 \maketitle
-\section*{Assignment - This section will be removed}
-The Assignment Is: After your group has had a chance to explore several R packages 
-and tutorials, discuss some possibilities for your own package. Write a short 
-(~1 page) document that outlines what you think you would like your package to do. 
-It is fine to create a package for which established alternatives already exist, 
-but it should not be an exact copy of an existing package. It is also fine for 
-functions in your package to rely on other R packages, but your package should be 
-more than a simple “wrapper” for another R package(s). Explain how you envision 
-someone using your software.
 
 \section*{High Level Concept of R Package}
-TODO: Something about how we would like to create an R package that takes a data 
-frame, and tell it what the predictor and response variables are, and then it will 
-produce all the standard EDA tests and plots in one go. It would do histograms of 
-variables, correlations of predictors and response variables, and consider standard 
-variable transformations. blah blah blah, expand on this...
+\indent \indent We would like to create an R package that simplifies Exploratory Data Analysis (EDA) 
+for regression models. Much of the time, the first steps of an EDA are the same, 
+regardless of the specific data set that is being analyzed. Using this package would 
+automate this repetitive portion of the EDA, and allow the user to focus their 
+attention on more interesting analysis.
 
-\section*{Additional R Packages}
-TODO: In this section we can discuss the high level R packages that we'll most likely 
-use, like tidyverse. We can write this in some sort of coherent paragraph.
+This package would take an R data frame as its input along with the predictor 
+and response variable names. Then, it would produce a series of EDA plots including:
+
+\begin{enumerate}
+\item Summary statistics
+\item Univariate histograms of quantitative predictors
+\item Bar plots of categorical predictors
+\item Full set of correlation plots between the response variables and the predictor. 
+\end{enumerate}
+
+It would also consider potential variable transformations, and identify multicollinearity 
+between predictors.
 
 \section*{Potential Usage}
-TODO: Write something about how we envision someone using this for like the Data 
-Analysis Exam, or first pass at an EDA. Basically we envision someone using this 
-tool to perform a quick EDA dump just to get a little bit of everything for a simple 
-regression analysis. We can write this in some sort of complete coherent way.
+\indent \indent We envision two main use cases for this package. The first is a statistician who is 
+studying a new data set and wants to quickly perform an initial EDA to get a better 
+understanding of patterns within the data set. Instead of writing duplicated code 
+or writing custom functions, the statistician could directly use functions from 
+this package. It is possible that follow up EDA may still be required, but this package 
+would save time in the initial analysis.
+
+The second use case is as an instructional tool. Since the package would generate 
+plots of the most common EDA analyses, it could be used by instructors to teach 
+students how to visually interpret EDA plots without requiring them to also walk 
+the students through a lot of R code. After students are comfortable analyzing EDA 
+plots and using them to draw inferences, they could then focus on learning the 
+specific R functions to examine and plot their data sets.
+
+
 
 
 \end{document}
