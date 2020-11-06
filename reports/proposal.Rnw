@@ -45,9 +45,50 @@ description of the responsibilities for each group member.
 a shared document service like Google Drive, Dropbox, github, etc. be part of your plan. 
 \end{enumerate}
 
-The full project will include coding, documentation, creating a vignette, and recording a short video. It is okay if not everyone works on every component, but be aware that some parts of the project must happen before others. Note: if the responsibilities seem out of balance, I reserve the right to ask you to adjust them.
+The full project will include coding, documentation, creating a vignette, and recording 
+a short video. It is okay if not everyone works on every component, but be aware 
+that some parts of the project must happen before others. Note: if the responsibilities 
+seem out of balance, I reserve the right to ask you to adjust them.
 
-\section{Proposal - Draft}
-TODO:??? 
+\section{Issues Addressed by This Package}
+\indent \indent We envision three main that this package will address. The first 
+is simplifying Exploratory Data Analysis (EDA). Instead of writing duplicated code 
+or writing custom functions, a statistician could directly use functions from this 
+package.
+
+The second issue is introducing formal EDA to statistics students without requiring 
+them to learn complicated code. Since the package would generate plots of the most 
+common EDA analyses, it could be used by instructors to teach students how to visually 
+interpret EDA plots without requiring them to also walk the students through a lot 
+of R code. After students are comfortable analyzing EDA plots and using them to draw 
+inferences, they could then focus on learning the specific R functions to examine 
+and plot their data sets.
+
+The last issue this package addresses is reproducibility of statistical analyses. 
+Complicated R code is more difficult to read and can cause difficulty when other 
+research teams attempt to run code written by others. By simplifying the EDA code 
+this package could help address this problem.
+
+\section{Statistical Methods}
+\indent \indent TODO: 
+
+\section{Implementation}
+\indent \indent TODO: 
+
+\section{Contributions and Responsibilities}
+\indent \indent TODO: 
+
+\section{Communication}
+\indent \indent Group 5 will be using GitHub and GroupMe as its two forms of communication. GroupMe 
+allows the group members to communicate with each other simultaneously, and also 
+provides the ability to share images and files. This platform will also allow the 
+group to brainstorm ideas as well as have informal and ad hoc conversations about 
+the direction of the project.
+
+GitHub will be used as the file sharing platform for the R package code. All group 
+members have already created accounts and have tested the platform's usability. The 
+exploration and proposal were written as .Rnw files and were shared via GitHub as a
+training tool so that all members could gain experience pushing and pulling changes 
+to GitHub prior to writing any code.
 
 \end{document}

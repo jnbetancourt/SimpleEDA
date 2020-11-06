@@ -61,7 +61,4 @@ the students through a lot of R code. After students are comfortable analyzing E
 plots and using them to draw inferences, they could then focus on learning the 
 specific R functions to examine and plot their data sets.
 
-
-
-
 \end{document}
