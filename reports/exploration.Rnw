@@ -19,7 +19,8 @@
 \usepackage{enumitem}
 
 \title{Stat 580: Exploration} 
-\author{Group 5}
+\author{Group 5: Jennifer Betancourt, Michael Herrington, Justin Kinoshita, 
+Robyn Saiki}
 \date{\today}
 
 \begin{document} 
