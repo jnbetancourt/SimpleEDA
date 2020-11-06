@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+\usepackage{rotating}
+\usepackage{graphics}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{listings} % allows for importing code scripts into the tex file
+\usepackage[margin=1in, left=1.25in]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\title{Stat 580: Proposal} 
+\author{Group 5: Jennifer Betancourt, Michael Herrington, Justin Kinoshita, 
+Robyn Saiki}
+\date{\today}
+
+\begin{document} 
+\maketitle
+
+\section*{Assignment}
+\indent \indent Once you have settled on a set of goals for your package, you will 
+write up a formal proposal that outlines your plan including a breakdown of the 
+contributions from each group member. Your group will submit a proposal document 
+to Canvas that details three statistical problems/issues your proposed R package 
+will address and how your package might solve those problems. The document will 
+also include a description of what each member of your research group will do to 
+contribute. The document should address the following questions:
+
+\begin{enumerate}
+\item What three problems/issues will your package address?
+\item What statistical methods do you plan to use to address those problems/issues? 
+How do you envision the solutions being implemented as functions in an R package?
+\item What will each person in the group do to contribute? Provide a detailed 
+description of the responsibilities for each group member.
+\item How will your group communicate throughout the project? I strongly recommend 
+a shared document service like Google Drive, Dropbox, github, etc. be part of your plan. 
+\end{enumerate}
+
+The full project will include coding, documentation, creating a vignette, and recording a short video. It is okay if not everyone works on every component, but be aware that some parts of the project must happen before others. Note: if the responsibilities seem out of balance, I reserve the right to ask you to adjust them.
+
+\section{Proposal - Draft}
+TODO:??? 
+
+\end{document}
