@@ -70,13 +70,32 @@ research teams attempt to run code written by others. By simplifying the EDA cod
 this package could help address this problem.
 
 \section{Statistical Methods}
-\indent \indent TODO: 
+\indent \indent TODO: Flush this section out but here's a general list of some stuff 
+we'll be using:
+\begin{enumerate}
+\item ggplot for histograms, bar graphs, correlation matrices
+\item summary statistics
+\item contingency tables and chi-squared test 
+\end{enumerate}
 
 \section{Implementation}
-\indent \indent TODO: 
+\indent \indent TODO: blah blah blah... We can figure out what we're going to put 
+here later. We can also consider collapsing this section with the Statistical 
+Methods
 
 \section{Contributions and Responsibilities}
 \indent \indent TODO: 
+
+\begin{enumerate}
+\item Create initial R package skeleton and code files (Jenn- I can do this)
+\item Write code for 1 in stat methods 
+\item Write code for 2 in stat methods 
+\item Write code for 3 in stat methods 
+\item Present R package in video 
+\item Video editing (Jenn- Not I Sam I am. I do not like green eggs and ham)
+\item bundle R package into .tar.gz (Jenn- I can do this)
+\end{enumerate}
+
 
 \section{Communication}
 \indent \indent Group 5 will be using GitHub and GroupMe as its two forms of communication. GroupMe 
