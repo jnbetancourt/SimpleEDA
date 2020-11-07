@@ -75,7 +75,8 @@ we'll be using:
 \begin{enumerate}
 \item ggplot for histograms, bar graphs, correlation matrices
 \item summary statistics
-\item contingency tables and chi-squared test 
+\item contingency tables and chi-squared test
+\item box-cox transform
 \end{enumerate}
 
 \section{Implementation}
@@ -88,9 +89,7 @@ Methods
 
 \begin{enumerate}
 \item Create initial R package skeleton and code files (Jenn- I can do this)
-\item Write code for 1 in stat methods 
-\item Write code for 2 in stat methods 
-\item Write code for 3 in stat methods 
+\item R Code Implementation (Everyone can contribute here)
 \item Present R package in video 
 \item Video editing (Jenn- Not I Sam I am. I do not like green eggs and ham)
 \item bundle R package into .tar.gz (Jenn- I can do this)
