@@ -40,3 +40,37 @@ box.
 that there is a conflict. You can use that dialog to open a merge tool that allows you to
 merge your changes with the ones on GitHub.
 7) Click the button that says "Push"
+
+
+## How to Build the R Package
+You should rebuild the R package after you have made changes to the source code R
+files in the `R/` directory.
+
+From inside the RStudio Project, go to the R Console and run:
+
+```
+# This only needs to be run one time to install the necessary packages
+install.packages(c("devtools", "roxygen2", "testthat", "knitr"))
+
+
+library(devtools)
+devtools::document()
+devtools::build(path = "./builds")
+```
+
+This will build a new `.tar.gz` file in the `builds` directory that can be used
+to install the SimpleEDA package.
+
+
+## Installing and Loading SimpleEDA Package
+
+In order to run the functions in the SimpleEDA package, open the RStudio project
+and go to the R Console. Then run:
+
+```
+# This only needs to be run one time to install the devtools package
+install.packages("devtools")
+
+devtools::install()
+library(simpleEDA)
+```

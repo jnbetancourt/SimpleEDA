@@ -1,0 +1,9 @@
+Package: simpleEDA
+Version: 0.1
+Encoding: UTF-8
+License: file LICENSE
+Title: A Simple EDA Tool
+Description: Performs simple EDA of data frames.
+Authors@R: person("First", "Last", email = "first.last@example.com",
+                  role = c("aut", "cre"))
+RoxygenNote: 7.1.1
