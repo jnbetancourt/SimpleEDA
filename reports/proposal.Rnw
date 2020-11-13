@@ -73,10 +73,10 @@ this package could help address this problem.
 \indent \indent TODO: Flush this section out but here's a general list of some stuff 
 we'll be using:
 \begin{enumerate}
-\item ggplot for histograms, bar graphs, correlation matrices
-\item summary statistics
-\item contingency tables and chi-squared test
-\item box-cox transform
+\item ggplot for histograms, bar graphs, correlation matrices. Used to visualize distriubtions of variables, and relationships between them.
+\item Summary statistics: to include mean, median, min and max of variables.
+\item Contingency tables and chi-squared test
+\item Box-cox transform. Used to ascertain appropriate transformations for variables.
 \end{enumerate}
 
 \section{Implementation}
@@ -90,7 +90,7 @@ Methods
 \begin{enumerate}
 \item Create initial R package skeleton and code files (Jenn- I can do this)
 \item R Code Implementation (Everyone can contribute here)
-\item Present R package in video 
+\item Present R package in video (Robyn - I can do this!)
 \item Video editing (Jenn- Not I Sam I am. I do not like green eggs and ham)
 \item bundle R package into .tar.gz (Jenn- I can do this)
 \end{enumerate}
