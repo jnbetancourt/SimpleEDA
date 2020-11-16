@@ -37,13 +37,15 @@ simpleEDA <- function(data_frame, response_column_name, predictor_column_names) 
   
   ## Factor -- Quantitative
   ### CD Plots
-  ### Bar plots by factor
+  ### Box plots by factor
   ### Cohen's D Test
   ### Anova t-test
   
   
   ## Quantitative -- Quantitative
   ### Full Correlation Matrix
+  ### Pairwise Scatters with Lowess Smooths
+  ### Box-Cox transforms for all vars vs predictor
 }
 
 
