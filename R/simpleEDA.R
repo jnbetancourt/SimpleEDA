@@ -1,5 +1,14 @@
 
+#' Title
+#'
+#' @param data_frame 
+#' @param response_column_name 
+#' @param predictor_column_names 
+#'
+#' @return
 #' @export
+#'
+#' @examples
 simpleEDA <- function(data_frame, response_column_name, predictor_column_names) {
   
   print('SimpleEDA')
@@ -7,45 +16,43 @@ simpleEDA <- function(data_frame, response_column_name, predictor_column_names) 
   print('Predictors:')
   print(predictor_column_names)
   
-  # Get the column indices for the predictor and response columns
-  column_names <- names(data_frame)
-  response_index <- match(response_column_name, column_names)
-  predictor_indices <- match(predictor_column_names, column_names)
-  
-  data <- data_frame[, c(response_index, predictor_indices)]
-  
-  # Subset the predictor and response columns
-  response <- data_frame[, c(response_index)]
-  predictors <- data_frame[, predictor_indices]
-  
-  # Divide the predictor 
-  is_factor <- sapply(predictors, is.factor)
-  quantitative_predictors <- predictors[, !is_factor]
-  factor_predictors <- predictors[, is_factor]
-  
+  # Get a new data frame that only has the response and predictor columns
+  data <- data_frame[, c(response_column_name, predictor_column_names), 
+                     drop=FALSE]
   
   # Univariate Analysis
+  print("Univariate Analysis")
+  
   ## Summary Statistics
-  ## Histograms for quantitative vars
-  ### Show side by side with log-transforms
-  ## Box plots for quantitative vars
-  ## Bar plots for factor vars
+  print("Response Variable:")
+  summary_stats(data, response_column_name)
+  univariate_plots(data, response_column_name)
+  
+  print("Predictor Variables:")
+  for (predictor_column_name in predictor_column_names) {
+    summary_stats(data, predictor_column_name)
+    univariate_plots(data, predictor_column_name)
+  }
   
   # Correlation Analysis
-  ## Factor - Factor
-  ### Contingency tables w/ Chi-Square and Fisher's Exact Test
   
-  ## Factor -- Quantitative
-  ### CD Plots
-  ### Box plots by factor
-  ### Cohen's D Test
-  ### Anova t-test
+  print("Correlations Between Response and Predictors")
+  for (predictor_column_name in predictor_column_names) {
+    analyzeCorrelation(data, response_column_name, predictor_column_name, boxcox_transform = TRUE)
+  }
   
   
-  ## Quantitative -- Quantitative
-  ### Full Correlation Matrix
-  ### Pairwise Scatters with Lowess Smooths
-  ### Box-Cox transforms for all vars vs predictor
+  print("Correlations Between Predictors")
+  for (i in 1:(length(predictor_column_names)-1)) {
+    for (j in (i+1):length(predictor_column_names)) {
+      analyzeCorrelation(data, predictor_column_names[i], predictor_column_names[j])
+    }
+  }
+  
+  
+  # TODO: Compute correlation matrix and highlight any multicollinearity
+  is_factor <- sapply(data, is.factor)
+  quantitative_variables <- data[, !is_factor, drop=FALSE]
 }
 
 
