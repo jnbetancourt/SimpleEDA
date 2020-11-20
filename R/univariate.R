@@ -18,10 +18,8 @@ is_factor_column <- function(data_frame, column_name) {
 #' @return
 #'
 #' @examples
- 
 #' This is an example of how to read the columns from a data frame when thte name 
 #' of the column is stored as a variable.
-
 summary_stats <- function(data_frame, column_name) {
   # For factor variables, print a table of counts and their percentages
   if (is_factor_column(data_frame, column_name)) {
@@ -48,11 +46,9 @@ summary_stats <- function(data_frame, column_name) {
 #' @return
 #'
 #' @examples
- 
 #' This is an example of how to use ggplot when the column names are stored in variables
 #' Note: If you call ggplot inside a function, you also need to call print to make 
 #' it show up
-
 univariate_plots <- function(data_frame, column_name) {
   # This is needed so that ggplot's aes() function can read the actual string
   # value stored in column_name
