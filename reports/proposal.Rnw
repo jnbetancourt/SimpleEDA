@@ -26,32 +26,8 @@ Robyn Saiki}
 \begin{document} 
 \maketitle
 
-\section*{Assignment}
-\indent \indent Once you have settled on a set of goals for your package, you will 
-write up a formal proposal that outlines your plan including a breakdown of the 
-contributions from each group member. Your group will submit a proposal document 
-to Canvas that details three statistical problems/issues your proposed R package 
-will address and how your package might solve those problems. The document will 
-also include a description of what each member of your research group will do to 
-contribute. The document should address the following questions:
-
-\begin{enumerate}
-\item What three problems/issues will your package address?
-\item What statistical methods do you plan to use to address those problems/issues? 
-How do you envision the solutions being implemented as functions in an R package?
-\item What will each person in the group do to contribute? Provide a detailed 
-description of the responsibilities for each group member.
-\item How will your group communicate throughout the project? I strongly recommend 
-a shared document service like Google Drive, Dropbox, github, etc. be part of your plan. 
-\end{enumerate}
-
-The full project will include coding, documentation, creating a vignette, and recording 
-a short video. It is okay if not everyone works on every component, but be aware 
-that some parts of the project must happen before others. Note: if the responsibilities 
-seem out of balance, I reserve the right to ask you to adjust them.
-
 \section{Issues Addressed by This Package}
-\indent \indent We envision three main that this package will address. The first 
+\indent \indent We envision three main issues that this package will address. The first 
 is simplifying Exploratory Data Analysis (EDA). Instead of writing duplicated code 
 or writing custom functions, a statistician could directly use functions from this 
 package.
@@ -70,29 +46,36 @@ research teams attempt to run code written by others. By simplifying the EDA cod
 this package could help address this problem.
 
 \section{Statistical Methods}
-\indent \indent TODO: Flush this section out but here's a general list of some stuff 
-we'll be using:
+\indent \indent We will use a set of standard statistical tools that are frequently
+used for EDAs, including:
 \begin{enumerate}
-\item ggplot for histograms, bar graphs, correlation matrices. Used to visualize distriubtions of variables, and relationships between them.
-\item Summary statistics: to include mean, median, min and max of variables.
+\item ggplot for histograms, bar graphs, and correlation matrices
+\item Summary statistics
 \item Contingency tables and chi-squared test
-\item Box-cox transform. Used to ascertain appropriate transformations for variables.
+\item Box-cox transform
 \end{enumerate}
 
 \section{Implementation}
-\indent \indent TODO: blah blah blah... We can figure out what we're going to put 
-here later. We can also consider collapsing this section with the Statistical 
-Methods
+\indent \indent The core functionality will be provided by a function called
+simpleEDA. The function will take an R data frame, an argument that indicates
+which of the columns is the response variable, and an argument that indicates
+which columns are predictor variables. Then, the function will automatically run a set of
+standard EDA tests and return the results. It will also generate a standard
+set of EDA plots.
+
+In order to implement the functionality of simpleEDA we will also write a number
+of helper functions that perform each separate statistical test or generate a 
+set of plots.
 
 \section{Contributions and Responsibilities}
-\indent \indent TODO: 
 
 \begin{enumerate}
-\item Create initial R package skeleton and code files (Jenn- I can do this)
-\item R Code Implementation (Everyone can contribute here)
-\item Present R package in video (Robyn - I can do this!)
-\item Video editing (Jenn- Not I Sam I am. I do not like green eggs and ham)
-\item bundle R package into .tar.gz (Jenn- I can do this)
+\item Create initial R package skeleton and code files (Jennifer Betancourt)
+\item Write R functions and documentation that performs the EDA (Everyone)
+\item Create vignette showing how to use the R package (Everyone)
+\item Present R package in video (Michael Herrington, Justin Kinoshita, Robyn Saiki)
+\item Video editing (Michael Herrington, Justin Kinoshita, Robyn Saiki)
+\item Bundle R package into .tar.gz (Jennifer Betancourt)
 \end{enumerate}
 
 
