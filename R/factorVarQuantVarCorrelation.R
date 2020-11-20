@@ -7,6 +7,11 @@
 #' @return
 #'
 #' @examples
+#' 
+#'  The function is called with a data frame and the names of two columns one of 
+#' which is a factor variable and the other of which is a continuous/quantiative 
+#' variable in the data frame. This function then performs a correlation analysis 
+#' of the two variables. 
 factorVarQuantVarCorrelation <- function(data_frame, factor_column_name, quant_column_name) {
   #TODO: Conditional Density Plot
   #TODO: Box plots by factor column
