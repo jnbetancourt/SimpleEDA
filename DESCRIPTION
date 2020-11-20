@@ -6,4 +6,8 @@ Title: A Simple EDA Tool
 Description: Performs simple EDA of data frames.
 Authors@R: person("First", "Last", email = "first.last@example.com",
                   role = c("aut", "cre"))
+Imports:
+  ggplot2 (>= 3.3.2),
+  gridExtra (>= 2.3),
+  MASS (>= 7.3)
 RoxygenNote: 7.1.1
