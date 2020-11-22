@@ -13,9 +13,9 @@
 #' variable in the data frame. This function then performs a correlation analysis 
 #' of the two variables. 
 factorVarQuantVarCorrelation <- function(data_frame, factor_column_name, quant_column_name) {
-  #TODO: Conditional Density Plot
-  #TODO: Box plots by factor column
-  #TODO: Cohen's D Test
+  #TODO: Conditional Density Plot (Robyn)
+  #TODO: Box plots by factor column (Robyn)
+  #TODO: Cohen's D Test (Robyn)
   #TODO: Shapiro-Wilk Test by factor column
   #TODO: Anova t-test
   #TODO: Kruskal-Wallis test

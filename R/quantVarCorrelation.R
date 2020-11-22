@@ -16,7 +16,7 @@
 #' transform where the first column is the response and the second column is the 
 #' predictor.
 quantVarCorrelation <- function(data_frame, first_column_name, second_column_name, boxcox_transform = FALSE) {
-  #TODO: Pairwise Scatter with Lowess Smooths
+  #TODO: Pairwise Scatter with Lowess Smooths (Robyn)
   #TODO: calculate correlation
   
   # To access first column, instead of using "data_frame$first_column_name", use:
