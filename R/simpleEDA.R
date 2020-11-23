@@ -49,7 +49,7 @@ simpleEDA <- function(data_frame, response_column_name, predictor_column_names) 
   }
   
   
-  # TODO: Compute correlation matrix and highlight any multicollinearity
+  # TODO: Compute correlation matrix and highlight any multicollinearity{Justin}
   is_factor <- sapply(data, is.factor)
   quantitative_variables <- data[, !is_factor, drop=FALSE]
 }
