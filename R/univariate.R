@@ -34,7 +34,7 @@ summary_stats <- function(data_frame, column_name) {
                         'sdev' = sd(data_frame[, column_name]))
     print(stats)
     
-    #TODO: Shapiro-Wilk normality test
+    #TODO: Shapiro-Wilk normality test (Jenn)
   }
 }
 
@@ -62,7 +62,7 @@ univariate_plots <- function(data_frame, column_name) {
     # If the quantitative distribution can easily be log-transformed, also
     # show the results of applying a log-transform
     
-    # TODO: Use an auto-binning algorithm for the histogram breaks
+    # TODO: Use an auto-binning algorithm for the histogram breaks (Jenn)
     hist <- ggplot2::ggplot(data = data_frame, aes(x = !!column_name_sym)) +
       ggplot2::geom_histogram()
     box <- ggplot2::ggplot(data = data_frame, aes(y = !!column_name_sym)) +
@@ -70,7 +70,7 @@ univariate_plots <- function(data_frame, column_name) {
     
     if (min(data_frame[, column_name]) > 1) {
       
-      # TODO: Use an auto-binning algorithm for the histogram breaks
+      # TODO: Use an auto-binning algorithm for the histogram breaks (Jenn)
       hist_log <- ggplot2::ggplot(data = data_frame, aes(x = log(!!column_name_sym))) +
               ggplot2::geom_histogram()
       
@@ -81,7 +81,7 @@ univariate_plots <- function(data_frame, column_name) {
       gridExtra::grid.arrange(box, box_log, nrow = 1)
             
     } else if (min(data_frame[, column_name]) > 0) {
-      # TODO: Use an auto-binning algorithm for the histogram breaks
+      # TODO: Use an auto-binning algorithm for the histogram breaks (Jenn)
       hist_log <- ggplot2::ggplot(data = data_frame, aes(x = log(1 + !!column_name_sym))) +
                           ggplot2::geom_histogram()
       
