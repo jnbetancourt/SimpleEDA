@@ -1,13 +1,12 @@
-#' Title
+#' A function that analyzes the correlation between two columns of a data frame
 #'
-#' @param data_frame 
-#' @param first_column_name 
-#' @param second_column_name 
-#' @param boxcox 
+#' @param data_frame The data frame to analyze
+#' @param first_column_name The name of the first column to compare
+#' @param second_column_name The name of the second column to compare
+#' @param boxcox_transform Whether or not to perform the Box-Cox transform
 #'
 #' @return
 #'
-#' @examples
 analyzeCorrelation <- function(data_frame, first_column_name, second_column_name, boxcox_transform = FALSE) {
   if (is_factor_column(data_frame, first_column_name)) {
     if (is_factor_column(data_frame, second_column_name)) {

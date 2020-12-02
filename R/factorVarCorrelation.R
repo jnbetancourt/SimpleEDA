@@ -1,12 +1,11 @@
-#' Title
+#' A function that analyzes the correlation between two factor variable columns
 #'
-#' @param data_frame 
-#' @param first_column_name 
-#' @param second_column_name 
+#' @param data_frame The data frame to analyze
+#' @param first_column_name The name of the first column to analyze
+#' @param second_column_name The name of the second column to analyze
 #'
 #' @return
 #'
-#' @examples
 #' 
 #' The function is called with a data frame and the names of two columns that are
 #' factor variables in the data frame. This function then performs a correlation 

@@ -2,20 +2,25 @@
 % Please edit documentation in R/factorVarQuantVarCorrelation.R
 \name{factorVarQuantVarCorrelation}
 \alias{factorVarQuantVarCorrelation}
-\title{Title}
+\title{A function that analyzes the correlation between a factor variable column
+and a quantitative variable column}
 \usage{
 factorVarQuantVarCorrelation(data_frame, factor_column_name, quant_column_name)
 }
 \arguments{
-\item{data_frame}{}
+\item{data_frame}{The data frame to analyze}
 
-\item{factor_column_name}{}
+\item{factor_column_name}{The name of the factor variable column}
 
-\item{quant_column_name}{}
+\item{quant_column_name}{The name of the quantitative variable column}
 }
 \value{
-
+The function is called with a data frame and the names of two columns one of 
+which is a factor variable and the other of which is a continuous/quantiative 
+variable in the data frame. This function then performs a correlation analysis 
+of the two variables.
 }
 \description{
-Title
+A function that analyzes the correlation between a factor variable column
+and a quantitative variable column
 }

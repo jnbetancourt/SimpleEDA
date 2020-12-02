@@ -2,18 +2,22 @@
 % Please edit documentation in R/univariate.R
 \name{univariate_plots}
 \alias{univariate_plots}
-\title{Title}
+\title{A function that generates a set of distribution plots for a single column in 
+a data frame}
 \usage{
 univariate_plots(data_frame, column_name)
 }
 \arguments{
-\item{data_frame}{}
+\item{data_frame}{The data frame to analyze}
 
-\item{column_name}{}
+\item{column_name}{The name of the column to generate plots for}
 }
 \value{
-
+This is an example of how to use ggplot when the column names are stored in variables
+Note: If you call ggplot inside a function, you also need to call print to make 
+it show up
 }
 \description{
-Title
+A function that generates a set of distribution plots for a single column in 
+a data frame
 }

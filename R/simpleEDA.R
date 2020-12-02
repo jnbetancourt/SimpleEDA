@@ -1,13 +1,13 @@
-#' Title
+#' A function that performs an EDA for a regression model over columns of a 
+#' data frame
 #'
-#' @param data_frame 
-#' @param response_column_name 
-#' @param predictor_column_names 
+#' @param data_frame The data frame to analyze
+#' @param response_column_name The name of the response variable column
+#' @param predictor_column_names The names of all predictor variable columns
 #'
 #' @return
 #' @export
 #'
-#' @examples
 simpleEDA <- function(data_frame, response_column_name, predictor_column_names) {
   
   print('SimpleEDA')
