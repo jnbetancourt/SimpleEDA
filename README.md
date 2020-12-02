@@ -1,5 +1,7 @@
 # SimpleEDA
 
+[![Build Status](https://travis-ci.com/jnbetancourt/SimpleEDA.svg?token=i1Xafx7oTZa1uneJDk3q&branch=main)](https://travis-ci.com/jnbetancourt/SimpleEDA)
+
 ## Instruction to set up Git:
 1) Go to https://git-scm.com/downloads and download and install git
 2) Go to github.com and create a new account
