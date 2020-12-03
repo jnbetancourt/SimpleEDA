@@ -1,14 +1,13 @@
-#' Title
+#' A function that analyzes the correlation between two quantitative variable columns
 #'
-#' @param data_frame 
-#' @param first_column_name 
-#' @param second_column_name 
-#' @param boxcox - A TRUE/FALSE value indicating whether or not to perform a boxcox transformation
+#' @param data_frame The data frame to analyze
+#' @param first_column_name The name of the first column to analyze
+#' @param second_column_name The name of the second column to analyze
+#' @param boxcox_transform - A TRUE/FALSE value indicating whether or not to perform a boxcox transformation
 #'                 and generate a plot
 #'
 #' @return
 #'
-#' @examples
 #' The function is called with a data frame and the names of two columns that are
 #' continuous/quantitative variables in the data frame. This function then performs 
 #' a correlation analysis of the two variables. It also takes an optional variable 

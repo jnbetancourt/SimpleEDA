@@ -2,20 +2,22 @@
 % Please edit documentation in R/factorVarCorrelation.R
 \name{factorVarCorrelation}
 \alias{factorVarCorrelation}
-\title{Title}
+\title{A function that analyzes the correlation between two factor variable columns}
 \usage{
 factorVarCorrelation(data_frame, first_column_name, second_column_name)
 }
 \arguments{
-\item{data_frame}{}
+\item{data_frame}{The data frame to analyze}
 
-\item{first_column_name}{}
+\item{first_column_name}{The name of the first column to analyze}
 
-\item{second_column_name}{}
+\item{second_column_name}{The name of the second column to analyze}
 }
 \value{
-
+The function is called with a data frame and the names of two columns that are
+factor variables in the data frame. This function then performs a correlation 
+analysis of the two factor variables.
 }
 \description{
-Title
+A function that analyzes the correlation between two factor variable columns
 }

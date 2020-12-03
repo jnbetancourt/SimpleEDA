@@ -2,7 +2,7 @@
 % Please edit documentation in R/correlation.R
 \name{analyzeCorrelation}
 \alias{analyzeCorrelation}
-\title{Title}
+\title{A function that analyzes the correlation between two columns of a data frame}
 \usage{
 analyzeCorrelation(
   data_frame,
@@ -12,17 +12,17 @@ analyzeCorrelation(
 )
 }
 \arguments{
-\item{data_frame}{}
+\item{data_frame}{The data frame to analyze}
 
-\item{first_column_name}{}
+\item{first_column_name}{The name of the first column to compare}
 
-\item{second_column_name}{}
+\item{second_column_name}{The name of the second column to compare}
 
-\item{boxcox}{}
+\item{boxcox_transform}{Whether or not to perform the Box-Cox transform}
 }
 \value{
 
 }
 \description{
-Title
+A function that analyzes the correlation between two columns of a data frame
 }

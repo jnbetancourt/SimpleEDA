@@ -2,18 +2,19 @@
 % Please edit documentation in R/univariate.R
 \name{summary_stats}
 \alias{summary_stats}
-\title{Title}
+\title{Performs univariate analysis of a single column in a data frame}
 \usage{
 summary_stats(data_frame, column_name)
 }
 \arguments{
-\item{data_frame}{}
+\item{data_frame}{The data frame to analyze}
 
-\item{column_name}{}
+\item{column_name}{The name of the column in the data frame}
 }
 \value{
-
+This is an example of how to read the columns from a data frame when the name 
+of the column is stored as a variable.
 }
 \description{
-Title
+Performs univariate analysis of a single column in a data frame
 }

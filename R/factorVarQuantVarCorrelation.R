@@ -1,12 +1,12 @@
-#' Title
+#' A function that analyzes the correlation between a factor variable column
+#' and a quantitative variable column
 #'
-#' @param data_frame 
-#' @param factor_column_name 
-#' @param quant_column_name 
+#' @param data_frame The data frame to analyze
+#' @param factor_column_name The name of the factor variable column
+#' @param quant_column_name The name of the quantitative variable column
 #'
 #' @return
 #'
-#' @examples
 #' 
 #'  The function is called with a data frame and the names of two columns one of 
 #' which is a factor variable and the other of which is a continuous/quantiative 

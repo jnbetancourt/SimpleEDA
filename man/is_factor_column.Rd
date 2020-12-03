@@ -2,18 +2,20 @@
 % Please edit documentation in R/univariate.R
 \name{is_factor_column}
 \alias{is_factor_column}
-\title{Title}
+\title{A function that determines whether or not a column in a data frame is a
+factor variable}
 \usage{
 is_factor_column(data_frame, column_name)
 }
 \arguments{
-\item{data_frame}{}
+\item{data_frame}{The data frame}
 
-\item{column_name}{}
+\item{column_name}{The name of a column in the data frame}
 }
 \value{
-
+TRUE/FALE
 }
 \description{
-Title
+A function that determines whether or not a column in a data frame is a
+factor variable
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/quantVarCorrelation.R
 \name{quantVarCorrelation}
 \alias{quantVarCorrelation}
-\title{Title}
+\title{A function that analyzes the correlation between two quantitative variable columns}
 \usage{
 quantVarCorrelation(
   data_frame,
@@ -12,18 +12,23 @@ quantVarCorrelation(
 )
 }
 \arguments{
-\item{data_frame}{}
+\item{data_frame}{The data frame to analyze}
 
-\item{first_column_name}{}
+\item{first_column_name}{The name of the first column to analyze}
 
-\item{second_column_name}{}
+\item{second_column_name}{The name of the second column to analyze}
 
-\item{boxcox}{- A TRUE/FALSE value indicating whether or not to perform a boxcox transformation
+\item{boxcox_transform}{- A TRUE/FALSE value indicating whether or not to perform a boxcox transformation
 and generate a plot}
 }
 \value{
-
+The function is called with a data frame and the names of two columns that are
+continuous/quantitative variables in the data frame. This function then performs 
+a correlation analysis of the two variables. It also takes an optional variable 
+called 'boxcox_transform'. If the variable is true, then it applies a Box Cox 
+transform where the first column is the response and the second column is the 
+predictor.
 }
 \description{
-Title
+A function that analyzes the correlation between two quantitative variable columns
 }
