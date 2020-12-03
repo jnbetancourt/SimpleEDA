@@ -13,13 +13,25 @@
 #' variable in the data frame. This function then performs a correlation analysis 
 #' of the two variables. 
 factorVarQuantVarCorrelation <- function(data_frame, factor_column_name, quant_column_name) {
-  #TODO: Conditional Density Plot (Robyn)
-  #TODO: Box plots by factor column (Robyn)
-  #TODO: Cohen's D Test (Robyn)
+  
+  # TODO: Box plots by factor column (Robyn)
+  # if quant_column_name is a continuous variable, create boxplots for each level of factor_column_name
+  if (is_factor_column(data_frame, quant_column_name) == FALSE) {
+    print(ggplot2::ggplot(data = data_frame, 
+          ggplot2::aes_string(group = factor_column_name, x = factor_column_name, y = quant_column_name)) + 
+          ggplot2::geom_boxplot())
+  }
+  
+  # TODO: Conditional Density Plot (Robyn)
+  cdplot(factor(data_frame[,factor_column_name])~data_frame[,quant_column_name], xlab = quant_column_name, ylab = factor_column_name)
+  
+  # TODO: Cohen's D Test (Robyn)
+  cohen.d(data_frame[,quant_column_name], factor(data_frame[,factor_column_name]))
+  
+  
   #TODO: Shapiro-Wilk Test by factor column
   #TODO: Anova t-test(Justin.)
   #TODO: Kruskal-Wallis test
-  
+}
   # To access first column, instead of using "data_frame$first_column_name", use:
   # data_frame[, first_column_name]
-}
