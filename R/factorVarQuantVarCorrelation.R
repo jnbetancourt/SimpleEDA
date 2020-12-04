@@ -31,6 +31,7 @@ factorVarQuantVarCorrelation <- function(data_frame, factor_column_name, quant_c
   
   #TODO: Shapiro-Wilk Test by factor column
   #TODO: Anova t-test(Justin.)
+  anova(data_frame)
   #TODO: Kruskal-Wallis test
 }
   # To access first column, instead of using "data_frame$first_column_name", use:
