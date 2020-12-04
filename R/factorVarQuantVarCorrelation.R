@@ -14,22 +14,41 @@
 #' of the two variables. 
 factorVarQuantVarCorrelation <- function(data_frame, factor_column_name, quant_column_name) {
   
+  # verify that factor_column_name is a factor
+  if(is_factor_column(data_frame, factor_column_name) == FALSE) {
+    stop(paste0(factor_column_name, "must be a factor"))
+  }
+  
   # TODO: Box plots by factor column (Robyn)
   # if quant_column_name is a continuous variable, create boxplots for each level of factor_column_name
   if (is_factor_column(data_frame, quant_column_name) == FALSE) {
     print(ggplot2::ggplot(data = data_frame, 
-          ggplot2::aes_string(group = factor_column_name, x = factor_column_name, y = quant_column_name)) + 
-          ggplot2::geom_boxplot())
+                          ggplot2::aes_string(group = factor_column_name, x = factor_column_name, y = quant_column_name)) + 
+            ggplot2::geom_boxplot())
   }
   
   # TODO: Conditional Density Plot (Robyn)
-  cdplot(factor(data_frame[,factor_column_name])~data_frame[,quant_column_name], xlab = quant_column_name, ylab = factor_column_name)
+  # create conditional density plot
+  cdplot(data_frame[,factor_column_name]~data_frame[,quant_column_name], xlab = quant_column_name, ylab = factor_column_name)
   
   # TODO: Cohen's D Test (Robyn)
-  cohen.d(data_frame[,quant_column_name], factor(data_frame[,factor_column_name]))
-  
+  # compute Cohen's d
+  cohen <- cohen.d(data_frame[,quant_column_name], data_frame[,factor_column_name])
+  print(cohen)
   
   #TODO: Shapiro-Wilk Test by factor column
+  # Shapiro-Wilk normality test for each level of the factor variable
+  n <- nlevels(factor(data_frame[,factor_column_name]))
+  
+  for (i in 1:n){
+    shapiro <- shapiro.test((data_frame[,quant_column_name])[levels(data_frame[,factor_column_name]) == levels(data_frame[,factor_column_name])[i]])
+    print(paste0("Normality test for ", quant_column_name, " when ", factor_column_name, " = ", levels(data_frame[,factor_column_name])[i]))
+    print(shapiro)
+  }
+  
+  
+  
+  
   #TODO: Anova t-test(Justin.)
   anova(data_frame)
   #TODO: Kruskal-Wallis test
