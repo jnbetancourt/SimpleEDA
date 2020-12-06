@@ -10,6 +10,6 @@ Imports:
   ggplot2 (>= 3.3.2),
   gridExtra (>= 2.3),
   MASS (>= 7.3),
-  rlang (>= 0.4.8)
+  rlang (>= 0.4.8),
   effsize (>= 0.8.1)
 RoxygenNote: 7.1.1
