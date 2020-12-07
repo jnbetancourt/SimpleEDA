@@ -15,18 +15,25 @@
 #' transform where the first column is the response and the second column is the 
 #' predictor.
 quantVarCorrelation <- function(data_frame, first_column_name, second_column_name, boxcox_transform = FALSE) {
-  #TODO: Pairwise Scatter with Lowess Smooths (Robyn)
+  #Pairwise Scatter with Lowess Smooths
+  graphics::plot(data_frame[,second_column_name], data_frame[,first_column_name], xlab = second_column_name, ylab = first_column_name)
+  graphics::lines(stats::lowess(data_frame[,second_column_name], data_frame[,first_column_name]), col="green") 
   
-  plot(data_frame[,second_column_name], data_frame[,first_column_name], xlab = second_column_name, ylab = first_column_name)
-  lines(lowess(data_frame[,second_column_name], data_frame[,first_column_name]), col="green") 
-  
-  #TODO: calculate correlation(Justin))
-  cor(data_frame[,first_column_name],data_frame[,second_column_name])
-  # To access first column, instead of using "data_frame$first_column_name", use:
-  # data_frame[, first_column_name]
+  # calculate correlation
+  cat("Correlation:\n")
+  cat(stats::cor(data_frame[,first_column_name],data_frame[,second_column_name]))
   
   if (boxcox_transform) {
-    #TODO: Box-Cox transform (from MASS package) where the first column is the 
-    #response and the second column is the predictor.
+    cat("\n\nBox-Cox Transform:\n")
+    frm <<- stats::as.formula(paste0(first_column_name, "~", second_column_name))
+    model <- stats::lm(formula = frm, data = data_frame)
+    b <- MASS::boxcox(model, data = data_frame, xlab = paste0(second_column_name, expression(lambda)))
+    rm(frm, envir = .GlobalEnv)
+    cat('Maximum Likelihood Lambda: ')
+    cat(b$x[which.max(b$y)])
+    lowerCI <- min(b$x[b$y > (max(b$y) - stats::qchisq(.95,1))])
+    upperCI <- max(b$x[b$y > (max(b$y) - stats::qchisq(.95,1))])
+    cat(paste('\n95% CI: [', lowerCI, ", ", upperCI, "]\n"))
+    
   }
 }
