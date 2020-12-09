@@ -9,3 +9,4 @@
 *.tex
 *.synctex.gz
 *.log
+inst/doc

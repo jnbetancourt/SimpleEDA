@@ -31,9 +31,6 @@ quantVarCorrelation <- function(data_frame, first_column_name, second_column_nam
     rm(frm, envir = .GlobalEnv)
     cat('Maximum Likelihood Lambda: ')
     cat(b$x[which.max(b$y)])
-    lowerCI <- min(b$x[b$y > (max(b$y) - stats::qchisq(.95,1))])
-    upperCI <- max(b$x[b$y > (max(b$y) - stats::qchisq(.95,1))])
-    cat(paste('\n95% CI: [', lowerCI, ", ", upperCI, "]\n"))
     
   }
 }

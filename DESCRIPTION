@@ -1,5 +1,5 @@
 Package: simpleEDA
-Version: 0.4
+Version: 1.0
 Encoding: UTF-8
 License: file LICENSE
 Title: A Simple EDA Tool
@@ -16,3 +16,7 @@ Imports:
   graphics (>= 3.6.2),
   grDevices (>= 3.6.2)
 RoxygenNote: 7.1.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
