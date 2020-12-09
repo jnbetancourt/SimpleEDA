@@ -2,7 +2,31 @@
 
 [![Build Status](https://travis-ci.com/jnbetancourt/SimpleEDA.svg?token=i1Xafx7oTZa1uneJDk3q&branch=main)](https://travis-ci.com/jnbetancourt/SimpleEDA)
 
-## Instruction to set up Git:
+## Overview
+The SimpleEDA R package can be used to perform an Exploratory Data Analysis (EDA) 
+of a data set. This package is intended to simplify the EDA that a statistician 
+would perform when analyzing a data set with the intention of constructing a regression 
+model.
+
+Please note that this package is called SimpleEDA not AutomaticEDA! The package 
+presents the results, but does no interpretation, and may not perform all of the 
+necessary tests based on the properties of the data set. For that, a trained 
+statistician would be required.
+
+## Sample Usage
+
+```r
+library(simpleEDA)
+
+data(mtcars)
+mtcars$am <- factor(mtcars$am, labels = c('automatic', 'manual'))
+mtcars$vs <- factor(mtcars$vs, labels = c('v-shaped', 'straight'))
+
+simpleEDA(data_frame = mtcars, response_column_name = 'mpg',
+          predictor_column_names = c('hp', 'wt', 'vs', 'am'))
+```
+
+## Instruction to set up Git
 1) Go to https://git-scm.com/downloads and download and install git
 2) Go to github.com and create a new account
 3) Follow the instructions at https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address to set up your email address
