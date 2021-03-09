@@ -26,19 +26,21 @@ summary_stats <- function(data_frame, column_name) {
                 dnn = paste('Frequency table: ', column_name)))
   } else {
     cat(paste("Distribution of:", column_name, '\n'))
-    stats <- data.frame('min' = min(data_frame[, column_name]),
-                        'median' = stats::median(data_frame[, column_name]),
-                        'mean' = mean(data_frame[, column_name]),
-                        'max' = max(data_frame[, column_name]),
-                        'sdev' = stats::sd(data_frame[, column_name]))
+    stats <- data.frame('min' = min(data_frame[, column_name], na.rm = T),
+                        'median' = stats::median(data_frame[, column_name], na.rm = T),
+                        'mean' = mean(data_frame[, column_name], na.rm = T),
+                        'max' = max(data_frame[, column_name], na.rm = T),
+                        'sdev' = stats::sd(data_frame[, column_name], na.rm = T))
     print(stats)
     cat('\n')
-    # Shapiro Wilk Normality Test
-    s <- stats::shapiro.test(data_frame[, column_name])
-    shapiro.statistic <- data.frame(W = s$statistic, pvalue = s$p.value)
+    # Shapiro Wilk Normality Test (only apply to sample sizes below 5000)
+    if ((dim(data_frame)[1]) < 5000) {
+      s <- stats::shapiro.test(data_frame[, column_name])
+      shapiro.statistic <- data.frame(W = s$statistic, pvalue = s$p.value)
     
-    cat(paste0("Shapiro-Wilk Normality test for ", column_name, "\n"))
-    print(shapiro.statistic)
+      cat(paste0("Shapiro-Wilk Normality test for ", column_name, "\n"))
+      print(shapiro.statistic)
+    }
   }
 }
 
@@ -58,6 +60,8 @@ univariate_plots <- function(data_frame, column_name) {
   # value stored in column_name
   column_name_sym <- rlang::sym(column_name)
   
+  coldata <- na.omit(data_frame[, column_name])
+  
   if (is_factor_column(data_frame, column_name)) {
     # Bar plots for factor vars
     print(ggplot2::ggplot(data = data_frame, ggplot2::aes_string(x = column_name)) + 
@@ -67,14 +71,14 @@ univariate_plots <- function(data_frame, column_name) {
     # show the results of applying a log-transform
     
     hist <- ggplot2::ggplot(data = data_frame, ggplot2::aes(x = !!column_name_sym)) +
-      ggplot2::geom_histogram(bins = numbins(data_frame[, column_name]))
+      ggplot2::geom_histogram(bins = numbins(coldata))
     box <- ggplot2::ggplot(data = data_frame, ggplot2::aes(y = !!column_name_sym)) +
       ggplot2::geom_boxplot()
     
-    if (min(data_frame[, column_name]) > 0) {
+    if (min(coldata) > 0) {
       
       hist_log <- ggplot2::ggplot(data = data_frame, ggplot2::aes(x = log(!!column_name_sym))) +
-              ggplot2::geom_histogram(bins = numbins(log(data_frame[, column_name])))
+              ggplot2::geom_histogram(bins = numbins(log(coldata)))
       
       box_log <- ggplot2::ggplot(data = data_frame, ggplot2::aes(y = log(!!column_name_sym))) +
               ggplot2::geom_boxplot()
@@ -82,9 +86,9 @@ univariate_plots <- function(data_frame, column_name) {
       gridExtra::grid.arrange(hist, hist_log, nrow = 1)
       gridExtra::grid.arrange(box, box_log, nrow = 1)
             
-    } else if (min(data_frame[, column_name]) > -1) {
+    } else if (min(coldata) > -1) {
       hist_log <- ggplot2::ggplot(data = data_frame, ggplot2::aes(x = log(1 + !!column_name_sym))) +
-                          ggplot2::geom_histogram(bins = numbins(log(1 + data_frame[, column_name])))
+                          ggplot2::geom_histogram(bins = numbins(log(1 + coldata)))
       
       box_log <- ggplot2::ggplot(data = data_frame, ggplot2::aes(y = log(1 + !!column_name_sym))) +
         ggplot2::geom_boxplot()

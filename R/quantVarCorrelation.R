@@ -15,19 +15,22 @@
 #' transform where the first column is the response and the second column is the 
 #' predictor.
 quantVarCorrelation <- function(data_frame, first_column_name, second_column_name, boxcox_transform = FALSE) {
+  
+  data_with_no_na <- na.omit(data_frame[,c(first_column_name, second_column_name)])
+  
   #Pairwise Scatter with Lowess Smooths
-  graphics::plot(data_frame[,second_column_name], data_frame[,first_column_name], xlab = second_column_name, ylab = first_column_name)
-  graphics::lines(stats::lowess(data_frame[,second_column_name], data_frame[,first_column_name]), col="green") 
+  graphics::plot(data_with_no_na[,second_column_name], data_with_no_na[,first_column_name], xlab = second_column_name, ylab = first_column_name)
+  graphics::lines(stats::lowess(data_with_no_na[,second_column_name], data_with_no_na[,first_column_name]), col="green") 
   
   # calculate correlation
   cat("Correlation:\n")
-  cat(stats::cor(data_frame[,first_column_name],data_frame[,second_column_name]))
+  cat(stats::cor(data_with_no_na[,first_column_name],data_with_no_na[,second_column_name]))
   
-  if (boxcox_transform) {
+  if (boxcox_transform && min(data_with_no_na[,first_column_name]) >= 0) {
     cat("\n\nBox-Cox Transform:\n")
     frm <<- stats::as.formula(paste0(first_column_name, "~", second_column_name))
-    model <- stats::lm(formula = frm, data = data_frame)
-    b <- MASS::boxcox(model, data = data_frame, xlab = paste0(second_column_name, expression(lambda)))
+    model <- stats::lm(formula = frm, data = data_with_no_na)
+    b <- MASS::boxcox(model, data = data_with_no_na, xlab = paste0(second_column_name, expression(lambda)))
     rm(frm, envir = .GlobalEnv)
     cat('Maximum Likelihood Lambda: ')
     cat(b$x[which.max(b$y)])

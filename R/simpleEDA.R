@@ -62,7 +62,8 @@ simpleEDA <- function(data_frame, response_column_name, predictor_column_names) 
   if (length(colnames(quantitative_variables)) > 1) {
     # Correlation matrix for quantitative variables
     cat("Correlation Matrix for Quantitative Variables\n")
-    cor_mat <- stats::cor(quantitative_variables)
+    cor_mat <- stats::cor(quantitative_variables, 
+                          use = "pairwise.complete.obs")
     print(cor_mat)
   }
 }
